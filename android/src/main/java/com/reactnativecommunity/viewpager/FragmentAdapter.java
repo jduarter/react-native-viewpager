@@ -54,6 +54,7 @@ public class FragmentAdapter extends FragmentStateAdapter {
     public ArrayList<ViewPagerFragment> getChildren() {
         return children;
     }
+
     public View getChildAt(int index) {
         return children.get(index).getView();
     }
