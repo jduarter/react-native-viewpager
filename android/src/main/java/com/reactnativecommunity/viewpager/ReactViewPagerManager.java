@@ -57,6 +57,7 @@ public class ReactViewPagerManager extends ViewGroupManager<ViewPager2> {
     @Override
     protected ViewPager2 createViewInstance(@NonNull ThemedReactContext reactContext) {
         final ViewPager2 vp = new ViewPager2(reactContext);
+        vp.setSaveEnabled(false);
         FragmentAdapter adapter = new FragmentAdapter((FragmentActivity) reactContext.getCurrentActivity());
         vp.setAdapter(adapter);
         eventDispatcher = reactContext.getNativeModule(UIManagerModule.class).getEventDispatcher();
